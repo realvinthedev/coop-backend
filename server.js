@@ -1,6 +1,5 @@
 
 const express = require('express')
-const path = require('path')
 require('dotenv').config()
 const mongoose = require('mongoose')
 const employeeRoutes = require('./routes/employee')
@@ -25,10 +24,6 @@ app.use((req, res, next)=>{
 })
 app.use(express.json())
 
-app.use(express.static(path.join(__dirname, '/frontend/build')));
-app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
-);
 
 /**ROUTES
  * different routes will be define here
