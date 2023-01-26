@@ -1,6 +1,7 @@
 
 const express = require('express')
 require('dotenv').config()
+const cors = require("cors");
 const mongoose = require('mongoose')
 const employeeRoutes = require('./routes/employee')
 const leavesRoutes = require('./routes/leaves')
@@ -12,12 +13,17 @@ const departmentRoutes = require('./routes/department')
  * express thingy
 */
 const app = express() 
+const corsOptions = {
+        origin: 'https://coop-2af5d.web.app/',
+        credentials: true,
+    };
 
 
 /**MIDDLEWARE
  * it will run all the time whenever there are request
  * it is like a global function that will run always whenever there are request detected(ex: GET, POST, etc)
  */
+app.use(cors(corsOptions()));
 app.use((req, res, next)=>{
      console.log('I am detecting a request - MIDDLEWARE')
      next();
