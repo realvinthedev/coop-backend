@@ -37,7 +37,7 @@ app.use('/api/departments', departmentRoutes)
 mongoose.connect(process.env.MONGO_URI)
         .then(()=>{
                 //listen request: 4000, callback function(the console log) to fire if successfully listen to 4000
-                app.listen(process.env.PORT, ()=> {
+                app.listen(process.env.PORT || 5000, ()=> {
                 console.log(`Connected to DB and Listening to port ${process.env.PORT}`)
                 })
 
