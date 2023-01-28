@@ -49,7 +49,15 @@ const employeeSchema = new Schema({
             type: String,
             required: true
       },
-      salary: {
+      base_salary: {
+            type: Number,
+            required: true
+      },
+      allowance: {
+            type: Number,
+            required: true
+      },
+      total_salary: {
             type: Number,
             required: true
       },
