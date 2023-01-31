@@ -2,25 +2,17 @@ const express = require('express')
 const router = express.Router()
 
 const {
-     createCredentials,
-     getAllCredentials,
-     getSingleCredentials,
-     updateSingleCredentials
+     loginUser,
+     signupUser,
 } = require('../controller/credentialsController')
 
 
 
 /**CREATE NEW Credentials */
-router.post('/', createCredentials)
+router.post('/login', loginUser)
 
 /**GET ALL CredentialsS */
-router.get('/', getAllCredentials)
-
-/**GET SINGLE Credentials */
-router.get('/:id', getSingleCredentials)
-
-/**EDIT SINGLE Credentials */
-router.patch('/:id', updateSingleCredentials)
+router.get('/signup', signupUser)
 
 
 

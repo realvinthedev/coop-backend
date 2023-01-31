@@ -1,84 +1,43 @@
 const { default: mongoose } = require('mongoose')
 const Credentials = require('../model/credentialsModel')
+const jwt = require('jsonwebtoken')
 
-
-/**CREATE NEW CREDENTIALS */
-const createCredentials = async (req, res) => {
-     const {
-          employee_id,
-          employee_name,
-          username,
-          password,
-          is_active
-     } = req.body
-
-     try {
-          const credential = await Credentials.create({
-               employee_id,
-               employee_name,
-               username,
-               password,
-               is_active
-          })
-          res.status(200).json(credential)
-     } catch (error) {
-          res.status(400).json({ error: error.message })
-     }
-}
-
-const getAllCredentials = async (req, res) => {
-     try {
-          /**Workout.find - finding al entries from DB
-           * await Workout.find() will run immediately even
-           * if the "workout" variable is not called yet
-           */
-          const allCredentials = await Credentials.find({}).sort({ createdAt: -1 })
-          //displaying response to user: all workouts from DB
-          res.status(200).json(allCredentials)
-     } catch (error) {
-          res.status(400).json({ error: error.message })
-     }
-}
-
-const getSingleCredentials = async (req, res) => {
-     const { id } = req.params;
-
-     //check if the id passed in parameter is valid id.
-     if (!mongoose.Types.ObjectId.isValid(id)) {
-          return res.status(404).json({ error: 'No Credential found' })
-     }
-
-     try {
-          const singleCredential = await Credentials.findById(id)
-          //displaying response to user: single workout by ID from DB
-          res.status(200).json(singleCredential)
-     } catch (error) {
-          res.status(400).json({ error: 'No Credential found' })
-     }
+const createToken = (_id) => {
+     return jwt.sign({_id},process.env.SECRET, {expiresIn: '3d'})
 }
 
 
-const updateSingleCredentials = async (req, res) => {
-     const { id } = req.params
+const loginUser = async (req, res) => {
+     const {username, password} = req.body
+     try {  
+          const user = await Credentials.login(username, password)
+   
+          //create a token
+          const token = createToken(user._id)
+      
+          res.status(200).json({username, token})
+        } catch (error) {
+          res.status(400).json({error: error.message})
+        }
+   }
 
-     if (!mongoose.Types.ObjectId.isValid(id)) {
-          return res.status(404).json({ error: 'No Credential found' })
-     }
-     try {
-          const singleCredentials = await Credentials.findOneAndUpdate({ _id: id }, {
-               ...req.body
-          })
 
-          //displaying response to user: deleted workout by ID from DB
-          res.status(200).json(singleCredentials)
+const signupUser = async (req, res) => {
+     const {username, password} = req.body
+   
+     try {  
+       const user = await Credentials.signup(username, password)
+
+       //create a token
+       const token = createToken(user._id)
+   
+       res.status(200).json({username, token})
      } catch (error) {
-          res.status(400).json({ error: 'No Credential found' })
+       res.status(400).json({error: error.message})
      }
-}
+   }
 
 module.exports = {
-     createCredentials,
-     getAllCredentials,
-     getSingleCredentials,
-     updateSingleCredentials
+     signupUser,
+     loginUser
 }
