@@ -12,7 +12,7 @@ const {
 router.post('/login', loginUser)
 
 /**GET ALL CredentialsS */
-router.get('/signup', signupUser)
+router.post('/signup', signupUser)
 
 
 
