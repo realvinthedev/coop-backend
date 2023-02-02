@@ -1,4 +1,5 @@
 const express = require('express')
+const requireAuth = require('../middleware/requireAuth')
 const router = express.Router()
 
 const {
@@ -8,7 +9,7 @@ const {
      deleteSingleEmployee,
      updateSingleEmployee
 } = require('../controller/employeeController')
-
+router.use(requireAuth)
 
 
 /**CREATE NEW EMPLOYEE */

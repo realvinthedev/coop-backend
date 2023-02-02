@@ -1,6 +1,5 @@
-
-
 const express = require('express')
+const requireAuth = require('../middleware/requireAuth')
 const router = express.Router()
 
 const {
@@ -11,7 +10,7 @@ const {
      deleteSingleDepartment
 } = require('../controller/departmentController')
 
-
+router.use(requireAuth)
 
 /**CREATE NEW DEPARTMENT */
 router.post('/', createDepartment)

@@ -1,4 +1,5 @@
 const express = require('express')
+const requireAuth = require('../middleware/requireAuth')
 const router = express.Router()
 
 const {
@@ -9,7 +10,7 @@ const {
      deleteSingleLeave
 } = require('../controller/leavesController')
 
-
+router.use(requireAuth)
 
 /**CREATE NEW Leave */
 router.post('/', createLeave)
