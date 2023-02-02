@@ -22,9 +22,6 @@ credentialsSchema.statics.signup = async function (username, password) {
       if (!username || !password) {
             throw Error('All fields must be filled')
       }
-      if (!validator.isStrongPassword(password)) {
-            throw Error('Password not strong enough')
-      }
 
       const exists = await this.findOne({ username })
 
