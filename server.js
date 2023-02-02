@@ -10,9 +10,7 @@ const departmentRoutes = require('./routes/department')
 
 
 
-/**EXPRESS APP 
- * express thingy
-*/
+
 const app = express()
 // const corsOptions = {
 //         origin: 'https://coop-2af5d.web.app/',
