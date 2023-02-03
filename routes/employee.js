@@ -7,7 +7,8 @@ const {
      getAllEmployees,
      getSingleEmployee,
      deleteSingleEmployee,
-     updateSingleEmployee
+     updateSingleEmployee,
+     updateSingleEmployeeLeave
 } = require('../controller/employeeController')
 router.use(requireAuth)
 
@@ -26,7 +27,9 @@ router.delete('/:id', deleteSingleEmployee)
 
 /**EDIT SINGLE EMPLOYEE */
 router.patch('/:id', updateSingleEmployee)
+/**EDIT SINGLE EMPLOYEE */
 
+router.patch('/leave/:id', updateSingleEmployeeLeave)
 
 
 

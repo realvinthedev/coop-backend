@@ -146,11 +146,26 @@ const updateSingleEmployee = async (req, res) => {
      }
 }
 
+const updateSingleEmployeeLeave = async (req, res) => {
+     const { id } = req.params;
+
+     try {
+          const singleEmployeeLeave = await Employee.findOneAndUpdate({ employee_id: `${id}`}, {
+               ...req.body
+          })
+          //displaying response to user: single workout by ID from DB
+          res.status(200).json(singleEmployeeLeave)
+     } catch (error) {
+          res.status(400).json({ error: 'No employee found' })
+     }
+}
+
 
 module.exports = {
      createEmployee,
      getAllEmployees,
      getSingleEmployee,
      deleteSingleEmployee,
-     updateSingleEmployee
+     updateSingleEmployee,
+     updateSingleEmployeeLeave
 }
