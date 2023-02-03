@@ -96,9 +96,9 @@ const getSingleEmployee = async (req, res) => {
      const { id } = req.params;
 
      //check if the id passed in parameter is valid id.
-     if (!mongoose.Types.ObjectId.isValid(id)) {
-          return res.status(404).json({ error: 'No employee found' })
-     }
+     // if (!mongoose.Types.ObjectId.isValid(id)) {
+     //      return res.status(404).json({ error: 'No employee found' })
+     // }
 
      try {
           const singleEmployee = await Employee.findOne({ employee_id: `${id}`}).exec();
