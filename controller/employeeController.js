@@ -101,7 +101,7 @@ const getSingleEmployee = async (req, res) => {
      }
 
      try {
-          const singleEmployee = await Employee.findById(id)
+          const singleEmployee = await Employee.findOne({ employee_id: id})
           //displaying response to user: single workout by ID from DB
           res.status(200).json(singleEmployee)
      } catch (error) {
