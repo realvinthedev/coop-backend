@@ -15,27 +15,51 @@ const dtrSchema = new Schema({
             type: String,
             required: true
       },
-      am_in: {
+      am_in_hour: {
             type: Number,
             required: true
       },
-      am_out: {
+      am_in_min: {
             type: Number,
             required: true
       },
-      pm_in: {
+      am_out_hour: {
             type: Number,
             required: true
       },
-      pm_out: {
+      am_out_min: {
             type: Number,
             required: true
       },
-      ot_in: {
+      pm_in_hour: {
             type: Number,
             required: true
       },
-      ot_out: {
+      pm_in_min: {
+            type: Number,
+            required: true
+      },
+      pm_out_hour: {
+            type: Number,
+            required: true
+      },
+      pm_out_min: {
+            type: Number,
+            required: true
+      },
+      ot_in_hour: {
+            type: Number,
+            required: true
+      },
+      ot_in_min: {
+            type: Number,
+            required: true
+      },
+      ot_out_hour: {
+            type: Number,
+            required: true
+      },
+      ot_out_min: {
             type: Number,
             required: true
       },
