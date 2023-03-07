@@ -63,6 +63,10 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
+      total_hour: {
+            type: Number,
+            required: true
+      },
       tardiness: {
             type: Number,
             required: true
