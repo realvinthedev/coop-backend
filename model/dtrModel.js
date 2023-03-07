@@ -3,10 +3,6 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 //defines the structures/model of the data in DB
 const dtrSchema = new Schema({
-      employee_id: {
-            type: String,
-            required: true
-      },
       name: {
             type: String,
             required: true
@@ -71,6 +67,10 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
+      is_absent: {
+            type: String,
+            required: false
+      },
       is_vl: {
             type: String,
             required: false
@@ -93,6 +93,4 @@ const dtrSchema = new Schema({
       {
             timestamps: true
       })
-
-
 module.exports = mongoose.model('Dtr',dtrSchema)
