@@ -7,15 +7,7 @@ const dtrSchema = new Schema({
             type: String,
             required: true
       },
-      firstname: {
-            type: String,
-            required: true
-      },
-      middlename: {
-            type: String,
-            required: false
-      },
-      lastname: {
+      name: {
             type: String,
             required: true
       },
