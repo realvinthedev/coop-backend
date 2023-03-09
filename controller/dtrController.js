@@ -62,7 +62,7 @@ const getAllDtrByDate = async (req, res) => {
      const { date } = req.params;
 
      try {
-          const dtr = await Dtr.findOne({ date: `${date}`}).exec();
+          const dtr = await Dtr.find({date})
           //displaying response to user: single workout by ID from DB
           res.status(200).json(dtr)
      } catch (error) {

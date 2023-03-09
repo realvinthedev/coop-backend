@@ -17,7 +17,7 @@ router.post('/', createDtr)
 router.get('/', getAllDtr)
 
 /**GET SINGLE EMPLOYEE */
-router.get('/:id', getAllDtrByDate)
+router.get('/:date', getAllDtrByDate)
 
 
 
