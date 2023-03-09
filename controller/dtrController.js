@@ -58,8 +58,21 @@ const getAllDtr = async (req, res) => {
      }
 }
 
+const getAllDtrByDate = async (req, res) => {
+     const { date } = req.params;
+
+     try {
+          const dtr = await Dtr.findOne({ date: `${date}`}).exec();
+          //displaying response to user: single workout by ID from DB
+          res.status(200).json(dtr)
+     } catch (error) {
+          res.status(400).json({ error: 'No dtr found' })
+     }
+}
+
 
 module.exports = {
      createDtr,
-     getAllDtr
+     getAllDtr,
+     getAllDtrByDate
 }
