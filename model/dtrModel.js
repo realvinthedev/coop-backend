@@ -8,7 +8,7 @@ const dtrSchema = new Schema({
             required: true
       },
       date: {
-            type: Date,
+            type: String,
             required: true
       },
       am_in_hour: {
