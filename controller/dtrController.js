@@ -20,12 +20,7 @@ const createDtr = async (req, res) => {
           ot_out_hour,
           ot_out_min,
           total_hour,
-          tardiness,
-          is_absent,
-          is_vl,
-          is_sl,
-          is_el,
-          is_holiday
+          tardiness
      } = req.body
 
      try {
@@ -45,12 +40,7 @@ const createDtr = async (req, res) => {
                ot_out_hour,
                ot_out_min,
                total_hour,
-               tardiness,
-               is_absent,
-               is_vl,
-               is_sl,
-               is_el,
-               is_holiday
+               tardiness
           })
           res.status(200).json(dtr)
      } catch (error) {

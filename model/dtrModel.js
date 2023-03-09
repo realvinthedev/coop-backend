@@ -66,28 +66,7 @@ const dtrSchema = new Schema({
       tardiness: {
             type: Number,
             required: true
-      },
-      is_absent: {
-            type: String,
-            required: false
-      },
-      is_vl: {
-            type: String,
-            required: false
-      },
-      is_sl: {
-            type: String,
-            required: false
-      },
-      is_el: {
-            type: String,
-            required: false
-      },
-      is_holiday: {
-            type: String,
-            required: false
-      },
-      
+      }
 },
 
       {
