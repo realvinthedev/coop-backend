@@ -5,6 +5,7 @@ const Dtr = require('../model/dtrModel')
 
 const createDtr = async (req, res) => {
      const {
+          employee_id,
           name,
           date,
           am_in_hour,
@@ -25,6 +26,7 @@ const createDtr = async (req, res) => {
 
      try {
           const dtr = await Dtr.create({
+               employee_id,
                name,
                date,
                am_in_hour,
