@@ -92,6 +92,10 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
+      absence_hours: {
+            type: Number,
+            required: true
+      },
 },
 
       {
