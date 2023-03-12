@@ -88,7 +88,11 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
-      official_timein: {
+      official_am_timein: {
+            type: Number,
+            required: true
+      },
+      official_pm_timein: {
             type: Number,
             required: true
       },
