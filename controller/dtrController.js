@@ -20,8 +20,11 @@ const createDtr = async (req, res) => {
           ot_in_min,
           ot_out_hour,
           ot_out_min,
-          total_hour,
-          tardiness
+          total_working_hour,
+          total_ot_hour,
+          ot_type,
+          total_tardiness_min,
+          is_tardiness,
      } = req.body
 
      try {
@@ -41,8 +44,11 @@ const createDtr = async (req, res) => {
                ot_in_min,
                ot_out_hour,
                ot_out_min,
-               total_hour,
-               tardiness
+               total_working_hour,
+               total_ot_hour,
+               ot_type,
+               total_tardiness_min,
+               is_tardiness,
           })
           res.status(200).json(dtr)
      } catch (error) {
@@ -64,7 +70,7 @@ const getAllDtrByDate = async (req, res) => {
      const { date } = req.params;
 
      try {
-          const dtr = await Dtr.find({date})
+          const dtr = await Dtr.find({ date })
           //displaying response to user: single workout by ID from DB
           res.status(200).json(dtr)
      } catch (error) {

@@ -63,12 +63,25 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
-      total_hour: {
+      total_working_hour: {
             type: Number,
             required: true
       },
-      tardiness: {
+      
+      total_ot_hour: {
             type: Number,
+            required: true
+      },
+      ot_type: {
+            type: String,
+            required: true
+      },
+      total_tardiness_min: {
+            type: Number,
+            required: true
+      },
+      is_tardiness: {
+            type: Boolean,
             required: true
       }
 },
