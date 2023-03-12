@@ -8,6 +8,7 @@ const leavesRoutes = require('./routes/leaves')
 const credentialsRoutes = require('./routes/credentials')
 const departmentRoutes = require('./routes/department')
 const dtrRoutes = require('./routes/dtr')
+const additionalRoutes = require('./routes/additional')
 
 
 
@@ -46,6 +47,7 @@ app.use('/api/leaves', leavesRoutes)
 app.use('/api/credentials', credentialsRoutes)
 app.use('/api/departments', departmentRoutes)
 app.use('/api/dtr', dtrRoutes)
+app.use('/api/additional', additionalRoutes)
 
 /**CONNECT TO DB */
 mongoose.connect(process.env.MONGO_URI)

@@ -83,6 +83,10 @@ const dtrSchema = new Schema({
       is_tardiness: {
             type: Boolean,
             required: true
+      },
+      leave_hours: {
+            type: Number,
+            required: true
       }
 },
 
