@@ -87,7 +87,11 @@ const dtrSchema = new Schema({
       leave_hours: {
             type: Number,
             required: true
-      }
+      },
+      official_timein: {
+            type: Number,
+            required: true
+      },
 },
 
       {
