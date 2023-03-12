@@ -26,7 +26,6 @@ const createDtr = async (req, res) => {
           total_tardiness_min,
           is_tardiness,
           leave_hours,
-          official_timein
      } = req.body
 
      try {
@@ -52,7 +51,6 @@ const createDtr = async (req, res) => {
                total_tardiness_min,
                is_tardiness,
                leave_hours,
-               official_timein
           })
           res.status(200).json(dtr)
      } catch (error) {
