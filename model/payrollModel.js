@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 //defines the structures/model of the data in DB
-const PayrollSchema = new Schema({
+const payrollSchema = new Schema({
       employee_id: {
             type: String,
             required: true
@@ -185,4 +185,4 @@ const PayrollSchema = new Schema({
       {
             timestamps: true
       })
-module.exports = mongoose.model('PayrollSchema',payrollSchema)
+module.exports = mongoose.model('Payroll',payrollSchema)
