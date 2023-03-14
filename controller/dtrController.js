@@ -83,10 +83,22 @@ const getAllDtrByDate = async (req, res) => {
           res.status(400).json({ error: 'No dtr found' })
      }
 }
+const getSingleDtr = async (req, res) => {
+     const { id } = req.params;
+
+     try {
+          const singleEmployee = await Dtr.findOne({ employee_id: `${id}`}).exec();
+          //displaying response to user: single workout by ID from DB
+          res.status(200).json(singleEmployee)
+     } catch (error) {
+          res.status(400).json({ error: 'No employee found' })
+     }
+}
 
 
 module.exports = {
      createDtr,
      getAllDtr,
-     getAllDtrByDate
+     getAllDtrByDate,
+     getSingleDtr
 }

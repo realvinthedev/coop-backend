@@ -5,7 +5,8 @@ const router = express.Router()
 const {
      createDtr,
      getAllDtr,
-     getAllDtrByDate
+     getAllDtrByDate,
+     getSingleDtr
 } = require('../controller/dtrController')
 router.use(requireAuth)
 
@@ -18,6 +19,7 @@ router.get('/', getAllDtr)
 
 /**GET SINGLE EMPLOYEE */
 router.get('/:date', getAllDtrByDate)
+router.get('/:id', getSingleDtr)
 
 
 
