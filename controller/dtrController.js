@@ -87,6 +87,7 @@ const getSingleDtr = async (req, res) => {
      const { employee_id } = req.params;
      try {
           const dtr = await Dtr.find({ employee_id })
+          console.log(dtr)
           //displaying response to user: single workout by ID from DB
           res.status(200).json(dtr)
      } catch (error) {
