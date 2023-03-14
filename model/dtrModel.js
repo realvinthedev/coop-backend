@@ -88,6 +88,14 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
+      leave_hours: {
+            type: Number,
+            required: true
+      },
+      leave_type: {
+            type: String,
+            required: false
+      },
       official_am_timein: {
             type: Number,
             required: true
