@@ -19,7 +19,7 @@ router.get('/', getAllDtr)
 
 /**GET SINGLE EMPLOYEE */
 router.get('/:date', getAllDtrByDate)
-router.get('/:employee_id', getSingleDtr)
+router.get('/employee/:employee_id', getSingleDtr)
 
 
 
