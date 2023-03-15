@@ -21,14 +21,22 @@ const createDtr = async (req, res) => {
           ot_out_hour,
           ot_out_min,
           total_working_hour,
-          total_ot_hour,
-          ot_type,  // make function to segregate the ot type and accumulate it
+          ot_type,
           total_tardiness_min,
-          is_tardiness, // make function to total true
-          //add leave type here // make function to segregate the leave type and accumulate it
-          leave_hours,
+          is_tardiness,
+          leave_type,
+          vl_hours,
+          sl_hours,
+          el_hours,
           official_am_timein,
-          is_absent, //make function to segregate the ot type and accumulate it
+          absent_hours,
+          vl_nopay_hours,
+          sl_nopay_hours,
+          el_nopay_hours,
+          regular_ot_hours,
+          restday_ot_hours,
+          special_ot_hours,
+          legal_ot_hours
      } = req.body
 
      try {
@@ -49,13 +57,22 @@ const createDtr = async (req, res) => {
                ot_out_hour,
                ot_out_min,
                total_working_hour,
-               total_ot_hour,
                ot_type,
                total_tardiness_min,
                is_tardiness,
-               leave_hours,
+               leave_type,
+               vl_hours,
+               sl_hours,
+               el_hours,
                official_am_timein,
-               is_absent
+               absent_hours,
+               vl_nopay_hours,
+               sl_nopay_hours,
+               el_nopay_hours,
+               regular_ot_hours,
+               restday_ot_hours,
+               special_ot_hours,
+               legal_ot_hours
           })
           res.status(200).json(dtr)
      } catch (error) {

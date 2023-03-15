@@ -68,10 +68,6 @@ const dtrSchema = new Schema({
             required: true
       },
       
-      total_ot_hour: {
-            type: Number,
-            required: true
-      },
       ot_type: {
             type: String,
             required: true
@@ -84,11 +80,15 @@ const dtrSchema = new Schema({
             type: Boolean,
             required: true
       },
-      leave_hours: {
+      vl_hours: {
             type: Number,
             required: true
       },
-      leave_hours: {
+      sl_hours: {
+            type: Number,
+            required: true
+      },
+      el_hours: {
             type: Number,
             required: true
       },
@@ -100,8 +100,36 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
-      is_absent: {
-            type: Boolean,
+      absent_hours: {
+            type: Number,
+            required: true
+      },
+      vl_nopay_hours: {
+            type: Number,
+            required: true
+      },
+      sl_nopay_hours: {
+            type: Number,
+            required: true
+      },
+      el_nopay_hours: {
+            type: Number,
+            required: true
+      },
+      regular_ot_hours: {
+            type: Number,
+            required: true
+      },
+      restday_ot_hours: {
+            type: Number,
+            required: true
+      },
+      special_ot_hours: {
+            type: Number,
+            required: true
+      },
+      legal_ot_hours: {
+            type: Number,
             required: true
       },
 },
