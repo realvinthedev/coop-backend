@@ -22,12 +22,13 @@ const createDtr = async (req, res) => {
           ot_out_min,
           total_working_hour,
           total_ot_hour,
-          ot_type,
+          ot_type,  // make function to segregate the ot type and accumulate it
           total_tardiness_min,
-          is_tardiness,
+          is_tardiness, // make function to total true
+          //add leave type here // make function to segregate the leave type and accumulate it
           leave_hours,
           official_am_timein,
-          is_absent,
+          is_absent, //make function to segregate the ot type and accumulate it
      } = req.body
 
      try {

@@ -53,11 +53,19 @@ const employeeSchema = new Schema({
             type: Number,
             required: true
       },
-      allowance: {
+      bimonthly_salary: {
             type: Number,
             required: true
       },
-      total_salary: {
+      daily_salary: {
+            type: Number,
+            required: true
+      },
+      hourly_salary: {
+            type: Number,
+            required: true
+      },
+      minute_salary: {
             type: Number,
             required: true
       },
