@@ -77,7 +77,7 @@ const dtrSchema = new Schema({
             required: true
       },
       is_tardiness: {
-            type: Boolean,
+            type: Number,
             required: true
       },
       vl_hours: {
