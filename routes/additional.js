@@ -14,7 +14,7 @@ router.use(requireAuth)
 router.post('/', createAdditional)
 
 
-router.get('/employeeid/:employee_id', getAdditionalById)
+router.get('/:employee_id', getAdditionalById)
 
 
 router.get('/date/:date', getAllAdditionalByDate)
