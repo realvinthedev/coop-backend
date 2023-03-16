@@ -7,7 +7,6 @@ const createAdditional = async (req, res) => {
      const {
           employee_id,
           name,
-          period,
           sss,
           philhealth,
           wtax,
@@ -32,7 +31,6 @@ const createAdditional = async (req, res) => {
           const additional = await Additional.create({
                employee_id,
                name,
-               period,
                sss,
                philhealth,
                wtax,

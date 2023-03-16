@@ -11,10 +11,6 @@ const additionalSchema = new Schema({
             type: String,
             required: true
       },
-      period: {
-            type: String,
-            required: true
-      },
       sss: {
             type: Number,
             required: true
