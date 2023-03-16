@@ -3,11 +3,15 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 //defines the structures/model of the data in DB
 const additionalSchema = new Schema({
-      employee_id: {
+      date_covered: {
             type: String,
             required: true
       },
       name: {
+            type: String,
+            required: true
+      },
+      employee_id: {
             type: String,
             required: true
       },
