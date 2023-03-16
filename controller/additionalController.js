@@ -69,13 +69,20 @@ const getAllAdditionalByDate = async (req, res) => {
           res.status(400).json({ error: 'No additional found' })
      }
 }
+const getAllAdditional = async (req, res) => {
+     try {
+          const allAddtional = await Additional.find({}).sort({ createdAt: -1 })
 
+          res.status(200).json(allAddtional)
+     } catch (error) {
+          res.status(400).json({ error: error.message })
+     }
+}
 const getAdditionalById = async (req, res) => {
      const { employee_id } = req.params;
 
      try {
           const additional = await Additional.find({ employee_id })
-       
           res.status(200).json(additional)
      } catch (error) {
           res.status(400).json({ error: 'No dtr found' })
@@ -85,5 +92,6 @@ const getAdditionalById = async (req, res) => {
 module.exports = {
      createAdditional,
      getAdditionalById,
-     getAllAdditionalByDate
+     getAllAdditionalByDate,
+     getAllAdditional
 }
