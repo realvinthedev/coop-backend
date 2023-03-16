@@ -12,7 +12,7 @@ const additionalSchema = new Schema({
             required: true
       },
       period: {
-            type: Number,
+            type: String,
             required: true
       },
       sss: {
