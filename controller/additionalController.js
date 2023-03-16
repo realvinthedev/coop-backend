@@ -5,6 +5,7 @@ const Additional = require('../model/additionalModel')
 
 const createAdditional = async (req, res) => {
      const {
+          date_covered,
           employee_id,
           name,
           sss,
@@ -29,6 +30,7 @@ const createAdditional = async (req, res) => {
 
      try {
           const additional = await Additional.create({
+               date_covered,
                employee_id,
                name,
                sss,
