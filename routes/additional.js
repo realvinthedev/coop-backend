@@ -4,20 +4,20 @@ const router = express.Router()
 
 const {
      createAdditional,
-     getAllAdditional,
+     getAdditionalById,
      getAllAdditionalByDate
 } = require('../controller/additionalController')
 router.use(requireAuth)
 
 
 
-router.post('/', createAdditional)
+router.post('/additional', createAdditional)
 
 
-router.get('/', getAllAdditional)
+router.get('/additional/:employee_id', getAdditionalById)
 
 
-router.get('/:date', getAllAdditionalByDate)
+router.get('/additional/:date', getAllAdditionalByDate)
 
 
 
