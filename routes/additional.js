@@ -11,7 +11,7 @@ router.use(requireAuth)
 
 
 
-router.post('/additional', createAdditional)
+router.post('/', createAdditional)
 
 
 router.get('/additional/:employee_id', getAdditionalById)
