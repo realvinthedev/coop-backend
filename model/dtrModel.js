@@ -48,10 +48,6 @@ const dtrSchema = new Schema({
             required: true
       },
      
-      total_ot_hour: {
-            type: Number,
-            required: true
-      },
       total_working_hour: {
             type: Number,
             required: true
