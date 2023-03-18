@@ -47,14 +47,27 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
+      ot_in_hour: {
+            type: Number,
+            required: true
+      },
+      ot_in_min: {
+            type: Number,
+            required: true
+      },
+      ot_out_hour: {
+            type: Number,
+            required: true
+      },
+      ot_out_min: {
+            type: Number,
+            required: true
+      },
       total_working_hour: {
             type: Number,
             required: true
       },
-      total_ot_hour: {
-            type: Number,
-            required: true
-      },
+      
       ot_type: {
             type: String,
             required: true
