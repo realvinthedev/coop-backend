@@ -56,7 +56,7 @@ app.use('/api/product', productRoutes)
 /**CONNECT TO DB */
 mongoose.connect(process.env.MONGO_URI)
         .then(() => {
-                //listen request: 4000, callback function(the console log) to fire if successfully listen to 4000
+                //listen request: 4000, callback function(the console log) to fire if successfully listen to 4k
                 app.listen(process.env.PORT || 5000, () => {
                         console.log(`Connected to DB and Listening to port ${process.env.PORT}`)
                 })
