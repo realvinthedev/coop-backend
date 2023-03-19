@@ -1,5 +1,5 @@
 const { default: mongoose } = require('mongoose')
-const Product = require('../model/ProductModel')
+const Product = require('../model/productModel')
 
 
 /**CREATE NEW Product */
