@@ -8,7 +8,7 @@ const {
      updateSingleProduct,
      getSingleProduct,
      deleteSingleProduct
-} = require('../controller/ProductController')
+} = require('../controller/productController')
 router.use(requireAuth)
 
 
