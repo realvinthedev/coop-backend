@@ -11,6 +11,7 @@ const dtrRoutes = require('./routes/dtr')
 const payrollRoutes = require('./routes/payroll')
 const additionalRoutes = require('./routes/additional')
 const productRoutes = require('./routes/product')
+const posRoutes = require('./routes/pos')
 
 
 
@@ -52,6 +53,7 @@ app.use('/api/dtr', dtrRoutes)
 app.use('/api/payroll', payrollRoutes)
 app.use('/api/additional', additionalRoutes)
 app.use('/api/product', productRoutes)
+app.use('/api/pos', posRoutes)
 
 /**CONNECT TO DB */
 mongoose.connect(process.env.MONGO_URI)
