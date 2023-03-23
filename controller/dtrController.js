@@ -105,10 +105,49 @@ const getSingleDtr = async (req, res) => {
      }
 }
 
+const editSingleDtr = async (req, res) => {
+     const { id } = req.params
+
+     if (!mongoose.Types.ObjectId.isValid(id)) {
+           return res.status(404).json({ error: 'No dtr found' })
+     }
+     try {
+           const dtr = await Dtr.findOneAndUpdate({ _id: id }, {
+                 ...req.body
+           })
+
+           //displaying response to user: deleted workout by ID from DB
+           res.status(200).json(dtr)
+     } catch (error) {
+           res.status(400).json({ error: 'No dtr found' })
+     }
+}
+
+const deleteSingleDtr = async (req, res) => {
+     //id of the request parameter. Ex: xxx/delete/12e3289je3o2jtu2
+     const { id } = req.params;
+
+     //check if the id passed in parameter is valid id.
+     if (!mongoose.Types.ObjectId.isValid(id)) {
+           return res.status(404).json({ error: 'No Dtr found' })
+     }
+     try {
+           //deleting an entry with the id in the parameter
+           const dtr = await Dtr.findOneAndDelete({ _id: id })
+
+           //return a response which is the deleted one.
+           res.status(200).json(dtr)
+     } catch (error) {
+           res.status(400).json({ error: 'No Dtr found' })
+     }
+}
+
 
 module.exports = {
      createDtr,
      getAllDtr,
      getAllDtrByDate,
-     getSingleDtr
+     getSingleDtr,
+     editSingleDtr,
+     deleteSingleDtr
 }
