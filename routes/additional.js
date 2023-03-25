@@ -6,7 +6,8 @@ const {
      createAdditional,
      getAdditionalById,
      getAllAdditionalByDate,
-     getAllAdditional
+     getAllAdditional,
+     deleteSingleAdditional
 } = require('../controller/additionalController')
 router.use(requireAuth)
 
@@ -21,7 +22,7 @@ router.get('/:employee_id', getAdditionalById)
 
 
 router.get('/date/:date', getAllAdditionalByDate)
-
+router.delete('/:id', deleteSingleAdditional)
 
 
 
