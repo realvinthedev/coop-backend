@@ -12,6 +12,8 @@ const payrollRoutes = require('./routes/payroll')
 const additionalRoutes = require('./routes/additional')
 const productRoutes = require('./routes/product')
 const posRoutes = require('./routes/pos')
+const memberRoutes = require('./routes/member')
+const savingsRoutes = require('./routes/savings')
 
 
 
@@ -55,6 +57,8 @@ app.use('/api/payroll', payrollRoutes)
 app.use('/api/additional', additionalRoutes)
 app.use('/api/product', productRoutes)
 app.use('/api/pos', posRoutes)
+app.use('/api/member', memberRoutes)
+app.use('/api/savings', savingsRoutes)
 
 /**CONNECT TO DB */
 mongoose.connect(process.env.MONGO_URI)
