@@ -26,6 +26,7 @@ const app = express()
 app.use((req, res, next) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+        res.header("Access-Control-Allow-Origin", "https://coop-2af5d.web.app");
         res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE');
         res.setHeader('Access-Control-Allow-Methods', 'Content-Type', 'Authorization');
         res.setHeader("Access-Control-Allow-Credentials", "true");

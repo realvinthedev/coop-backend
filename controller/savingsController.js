@@ -1,5 +1,5 @@
 const { default: mongoose } = require('mongoose')
-const Savings = require('../model/memberSavings')
+const Savings = require('../model/savingsModel')
 
 
 /**CREATE NEW SAVINGS */
