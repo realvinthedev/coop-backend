@@ -49,31 +49,11 @@ const memberSchema = new Schema({
             type: String,
             required: false
       },
-      membership_fee: {
-            type: Number,
-            required: false
-      },
-      share_capital: {
-            type: Number,
-            required: false
-      },
-      coop_savings: {
-            type: Number,
-            required: false
-      },
-      loan_balance: {
-            type: Number,
-            required: false
-      },
       mbh: {
             type: Number,
             required: false
       },
       housing_equity: {
-            type: Number,
-            required: false
-      },
-      kaya_savings: {
             type: Number,
             required: false
       },
