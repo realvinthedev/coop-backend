@@ -48,7 +48,7 @@ const getAllSavings = async (req, res) => {
 const getSingleSavings = async (req, res) => {
       const { member_id } = req.params;
       try {
-            const savings = await Savings.find({ member_id })
+            const savings = await Savings.find({ member_id : member_id })
             console.log(savings)
             //displaying response to user: single workout by ID from DB
             res.status(200).json(savings)
