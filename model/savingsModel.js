@@ -21,10 +21,6 @@ const savingsSchema = new Schema({
             type: String,
             required: true
       },
-      membership_fee: {
-            type: Number,
-            required: false
-      },
       date: {
             type: String,
             required: false
