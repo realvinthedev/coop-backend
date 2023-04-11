@@ -86,7 +86,7 @@ const deleteSingleSavings = async (req, res) => {
       }
       try {
             //deleting an entry with the id in the parameter
-            const singleSavings = await Product.findOneAndDelete({ _id: id })
+            const singleSavings = await Savings.findOneAndDelete({ _id: id })
 
             //return a response which is the deleted one.
             res.status(200).json(singleSavings)
