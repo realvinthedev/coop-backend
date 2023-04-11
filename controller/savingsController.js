@@ -6,9 +6,6 @@ const Savings = require('../model/savingsModel')
 const createSavings = async (req, res) => {
       const {
             member_id,
-            firstname,
-            middlename,
-            lastname,
             date,
             particulars,
             type,
@@ -21,9 +18,6 @@ const createSavings = async (req, res) => {
       try {
             const savings = await Savings.create({
                   member_id,
-                  firstname,
-                  middlename,
-                  lastname,
                   date,
                   particulars,
                   type,
