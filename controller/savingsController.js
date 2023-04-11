@@ -37,7 +37,7 @@ const getAllSavings = async (req, res) => {
              * await Workout.find() will run immediately even
              * if the "workout" variable is not called yet
              */
-            const allSavings = await Member.find({}).sort({ createdAt: -1 })
+            const allSavings = await Savings.find({}).sort({ createdAt: -1 })
             //displaying response to user: all workouts from DB
             res.status(200).json(allSavings)
       } catch (error) {
