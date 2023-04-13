@@ -50,15 +50,15 @@ const memberSchema = new Schema({
             required: false
       },
       mbh: {
-            type: Number,
+            type: String,
             required: false
       },
       housing_equity: {
-            type: Number,
+            type: String,
             required: false
       },
       atm_passbook_fee: {
-            type: Number,
+            type: String,
             required: false
       },
       atm_status: {
