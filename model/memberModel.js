@@ -37,10 +37,6 @@ const memberSchema = new Schema({
             type: String,
             required: false
       },
-      profileImage: {
-            type: Buffer,
-            required: false
-      },
       hhhc_membership_number: {
             type: String,
             required: false
