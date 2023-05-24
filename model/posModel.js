@@ -18,11 +18,16 @@ const posSchema = new Schema({
                   product_code: String,
                   product_name: String,
                   product_description: String,
+                  product_cost_price: Number,
                   product_selling_price: Number,
                   product_quantity: Number,
                   product_total: Number,
             },
       ],
+      pos_cost_total: {
+            type: Number,
+            required: true
+      },
       pos_total: {
             type: Number,
             required: true
