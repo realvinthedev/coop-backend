@@ -22,6 +22,7 @@ const posSchema = new Schema({
                   product_selling_price: Number,
                   product_quantity: Number,
                   product_total: Number,
+                  product_cost_total: Number
             },
       ],
       pos_cost_total: {
