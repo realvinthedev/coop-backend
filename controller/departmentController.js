@@ -5,14 +5,18 @@ const Department = require('../model/departmentModel')
 /**CREATE NEW Department */
 const createDepartment = async (req, res) => {
       const { 
+            department_id,
             department_name,
-            description
+            description,
+            other_info
      } = req.body
 
      try {
           const department = await Department.create({ 
-               department_name,
-               description
+            department_id,
+            department_name,
+            description,
+            other_info
           })
           res.status(200).json(department)
      } catch (error) {
