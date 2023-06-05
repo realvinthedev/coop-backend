@@ -52,7 +52,6 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
-      
       ot_type: {
             type: String,
             required: true
@@ -81,9 +80,21 @@ const dtrSchema = new Schema({
             type: String,
             required: false
       },
-      official_am_timein: {
+      official_am_in_hour: {
             type: Number,
-            required: true
+            required: false
+      },
+      official_am_in_min: {
+            type: Number,
+            required: false
+      },
+      official_pm_in_hour: {
+            type: Number,
+            required: false
+      },
+      official_pm_in_min: {
+            type: Number,
+            required: false
       },
       absent_hours: {
             type: Number,
