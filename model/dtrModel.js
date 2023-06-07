@@ -128,6 +128,10 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
+      total_undertime_min: {
+            type: Number,
+            required: false
+      },
 },
 
       {
