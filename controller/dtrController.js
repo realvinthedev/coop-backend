@@ -68,9 +68,7 @@ const createDtr = async (req, res) => {
                pm_out_min,
 
                is_restday,
-               is_tardiness,
-               is_overtime,
-
+               
                total_tardiness_min,
                total_undertime_min,
                leave_type,

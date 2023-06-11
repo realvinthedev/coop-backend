@@ -67,14 +67,6 @@ const dtrSchema = new Schema({
             type: String,
             required: false
       },
-      is_tardiness: {
-            type: String,
-            required: false
-      },
-      is_overtime: {
-            type: String,
-            required: false
-      },
       total_tardiness_min: {
             type: Number,
             required: false
