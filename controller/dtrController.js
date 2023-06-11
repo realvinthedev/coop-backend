@@ -8,6 +8,12 @@ const createDtr = async (req, res) => {
           employee_id,
           name,
           date,
+
+
+          official_am_in_hour,
+          official_am_in_min,
+          official_pm_in_hour,
+          official_pm_in_min,
           am_in_hour,
           am_in_min,
           am_out_hour,
@@ -16,27 +22,29 @@ const createDtr = async (req, res) => {
           pm_in_min,
           pm_out_hour,
           pm_out_min,
-          total_working_hour,
-          ot_type,
-          total_tardiness_min,
+
+          is_restday,
           is_tardiness,
+          is_overtime,
+
+          total_tardiness_min,
+          total_undertime_min,
           leave_type,
-          vl_hours,
-          sl_hours,
-          el_hours,
-          official_am_in_hour,
-          official_am_in_min,
-          official_pm_in_hour,
-          official_pm_in_min,
-          absent_hours,
-          vl_nopay_hours,
-          sl_nopay_hours,
-          el_nopay_hours,
+
+          absent_day,
+          vl_day,
+          sl_day,
+          el_day,
+
+          vl_nopay_day,
+          sl_nopay_day,
+          el_nopay_day,
+
+
           regular_ot_hours,
           restday_ot_hours,
           special_ot_hours,
           legal_ot_hours,
-          total_undertime_hour
      } = req.body
 
      try {
@@ -44,6 +52,12 @@ const createDtr = async (req, res) => {
                employee_id,
                name,
                date,
+
+
+               official_am_in_hour,
+               official_am_in_min,
+               official_pm_in_hour,
+               official_pm_in_min,
                am_in_hour,
                am_in_min,
                am_out_hour,
@@ -52,27 +66,30 @@ const createDtr = async (req, res) => {
                pm_in_min,
                pm_out_hour,
                pm_out_min,
-               total_working_hour,
-               ot_type,
-               total_tardiness_min,
+
+               is_restday,
                is_tardiness,
+               is_overtime,
+
+               total_tardiness_min,
+               total_undertime_min,
                leave_type,
-               vl_hours,
-               sl_hours,
-               el_hours,
-               official_am_in_hour,
-               official_am_in_min,
-               official_pm_in_hour,
-               official_pm_in_min,
-               absent_hours,
-               vl_nopay_hours,
-               sl_nopay_hours,
-               el_nopay_hours,
+
+               absent_day,
+               vl_day,
+               sl_day,
+               el_day,
+
+               vl_nopay_day,
+               sl_nopay_day,
+               el_nopay_day,
+
+
                regular_ot_hours,
                restday_ot_hours,
                special_ot_hours,
                legal_ot_hours,
-               total_undertime_hour
+
           })
           res.status(200).json(dtr)
      } catch (error) {
@@ -117,17 +134,17 @@ const editSingleDtr = async (req, res) => {
      const { id } = req.params
 
      if (!mongoose.Types.ObjectId.isValid(id)) {
-           return res.status(404).json({ error: 'No dtr found' })
+          return res.status(404).json({ error: 'No dtr found' })
      }
      try {
-           const dtr = await Dtr.findOneAndUpdate({ _id: id }, {
-                 ...req.body
-           })
+          const dtr = await Dtr.findOneAndUpdate({ _id: id }, {
+               ...req.body
+          })
 
-           //displaying response to user: deleted workout by ID from DB
-           res.status(200).json(dtr)
+          //displaying response to user: deleted workout by ID from DB
+          res.status(200).json(dtr)
      } catch (error) {
-           res.status(400).json({ error: 'No dtr found' })
+          res.status(400).json({ error: 'No dtr found' })
      }
 }
 
@@ -137,16 +154,16 @@ const deleteSingleDtr = async (req, res) => {
 
      //check if the id passed in parameter is valid id.
      if (!mongoose.Types.ObjectId.isValid(id)) {
-           return res.status(404).json({ error: 'No Dtr found' })
+          return res.status(404).json({ error: 'No Dtr found' })
      }
      try {
-           //deleting an entry with the id in the parameter
-           const dtr = await Dtr.findOneAndDelete({ _id: id })
+          //deleting an entry with the id in the parameter
+          const dtr = await Dtr.findOneAndDelete({ _id: id })
 
-           //return a response which is the deleted one.
-           res.status(200).json(dtr)
+          //return a response which is the deleted one.
+          res.status(200).json(dtr)
      } catch (error) {
-           res.status(400).json({ error: 'No Dtr found' })
+          res.status(400).json({ error: 'No Dtr found' })
      }
 }
 

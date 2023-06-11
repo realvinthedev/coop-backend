@@ -15,6 +15,22 @@ const dtrSchema = new Schema({
             type: String,
             required: true
       },
+      official_am_in_hour: {
+            type: Number,
+            required: false
+      },
+      official_am_in_min: {
+            type: Number,
+            required: false
+      },
+      official_pm_in_hour: {
+            type: Number,
+            required: false
+      },
+      official_pm_in_min: {
+            type: Number,
+            required: false
+      },
       am_in_hour: {
             type: Number,
             required: true
@@ -47,91 +63,75 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
-     
-      total_working_hour: {
-            type: Number,
-            required: true
-      },
-      ot_type: {
+      is_restday: {
             type: String,
-            required: true
+            required: false
+      },
+      is_tardiness: {
+            type: String,
+            required: false
+      },
+      is_overtime: {
+            type: String,
+            required: false
       },
       total_tardiness_min: {
             type: Number,
-            required: true
-      },
-      is_tardiness: {
-            type: Number,
-            required: true
-      },
-      vl_hours: {
-            type: Number,
-            required: true
-      },
-      sl_hours: {
-            type: Number,
-            required: true
-      },
-      el_hours: {
-            type: Number,
-            required: true
-      },
-      leave_type: {
-            type: String,
             required: false
-      },
-      official_am_in_hour: {
-            type: Number,
-            required: false
-      },
-      official_am_in_min: {
-            type: Number,
-            required: false
-      },
-      official_pm_in_hour: {
-            type: Number,
-            required: false
-      },
-      official_pm_in_min: {
-            type: Number,
-            required: false
-      },
-      absent_hours: {
-            type: Number,
-            required: true
-      },
-      vl_nopay_hours: {
-            type: Number,
-            required: true
-      },
-      sl_nopay_hours: {
-            type: Number,
-            required: true
-      },
-      el_nopay_hours: {
-            type: Number,
-            required: true
-      },
-      regular_ot_hours: {
-            type: Number,
-            required: true
-      },
-      restday_ot_hours: {
-            type: Number,
-            required: true
-      },
-      special_ot_hours: {
-            type: Number,
-            required: true
-      },
-      legal_ot_hours: {
-            type: Number,
-            required: true
       },
       total_undertime_min: {
             type: Number,
             required: false
       },
+      leave_type: {
+            type: String,
+            required: false
+      },
+      absent_day: {
+            type: Number,
+            required: false
+      },
+      vl_day: {
+            type: Number,
+            required: false
+      },
+      sl_day: {
+            type: Number,
+            required: false
+      },
+      el_day: {
+            type: Number,
+            required: false
+      },
+      vl_nopay_day: {
+            type: Number,
+            required: false
+      },
+      sl_nopay_day: {
+            type: Number,
+            required: false
+      },
+      el_nopay_day: {
+            type: Number,
+            required: false
+      },
+      regular_ot_hours: {
+            type: Number,
+            required: false
+      },
+      restday_ot_hours: {
+            type: Number,
+            required: false
+      },
+      special_ot_hours: {
+            type: Number,
+            required: false
+      },
+      legal_ot_hours: {
+            type: Number,
+            required: false
+      }
+
 },
 
       {
