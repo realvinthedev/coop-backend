@@ -125,16 +125,28 @@ const employeeSchema = new Schema({
             type: Number,
             required: true
       },
-      photo: {
-            type: String,
-            required: false
-      },
       username: {
             type: String,
             required: false
       },
       password: {
             type: String,
+            required: false
+      },
+      regular_ot: {
+            type: Number,
+            required: false
+      },
+      restday_ot: {
+            type: Number,
+            required: false
+      },
+      special_ot: {
+            type: Number,
+            required: false
+      },
+      legal_ot: {
+            type: Number,
             required: false
       },
 },

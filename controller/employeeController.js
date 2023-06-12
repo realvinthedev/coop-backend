@@ -35,9 +35,13 @@ const createEmployee = async (req, res) => {
           sick_leave,
           vacation_leave,
           emergency_leave,
-          photo,
+         
           username,
-          password
+          password,
+          regular_ot,
+          restday_ot,
+          special_ot,
+          legal_ot
      } = req.body
 
      try {
@@ -72,9 +76,13 @@ const createEmployee = async (req, res) => {
                sick_leave,
                vacation_leave,
                emergency_leave,
-               photo,
                username,
-               password
+               password,
+               regular_ot,
+               restday_ot,
+               special_ot,
+               legal_ot
+
           })
           res.status(200).json(employee)
      } catch (error) {
@@ -105,7 +113,7 @@ const getSingleEmployee = async (req, res) => {
      // }
 
      try {
-          const singleEmployee = await Employee.findOne({ employee_id: `${id}`}).exec();
+          const singleEmployee = await Employee.findOne({ employee_id: `${id}` }).exec();
           //displaying response to user: single workout by ID from DB
           res.status(200).json(singleEmployee)
      } catch (error) {
@@ -154,7 +162,7 @@ const updateSingleEmployeeLeave = async (req, res) => {
      const { id } = req.params;
 
      try {
-          const singleEmployeeLeave = await Employee.findOneAndUpdate({ employee_id: `${id}`}, {
+          const singleEmployeeLeave = await Employee.findOneAndUpdate({ employee_id: `${id}` }, {
                ...req.body
           })
           //displaying response to user: single workout by ID from DB
