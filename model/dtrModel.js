@@ -122,7 +122,11 @@ const dtrSchema = new Schema({
       legal_ot_hours: {
             type: Number,
             required: false
-      }
+      },
+      day_type: {
+            type: String,
+            required: false
+      },
 
 },
 

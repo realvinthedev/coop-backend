@@ -45,6 +45,7 @@ const createDtr = async (req, res) => {
           restday_ot_hours,
           special_ot_hours,
           legal_ot_hours,
+          day_type
      } = req.body
 
      try {
@@ -87,6 +88,7 @@ const createDtr = async (req, res) => {
                restday_ot_hours,
                special_ot_hours,
                legal_ot_hours,
+               day_type
 
           })
           res.status(200).json(dtr)
