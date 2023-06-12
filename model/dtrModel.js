@@ -127,6 +127,10 @@ const dtrSchema = new Schema({
             type: String,
             required: false
       },
+      approve_ot: {
+            type: String,
+            required: false
+      },
 
 },
 
