@@ -63,7 +63,10 @@ const dtrSchema = new Schema({
             type: Number,
             required: true
       },
-      is_restday: {
+
+
+
+      is_restday: {   // #1
             type: String,
             required: false
       },
@@ -75,22 +78,22 @@ const dtrSchema = new Schema({
             type: Number,
             required: false
       },
-      leave_type: {
+      leave_type: { //no
             type: String,
             required: false
       },
       absent_day: {
             type: Number,
             required: false
-      },
+      },  // #2
       vl_day: {
             type: Number,
             required: false
-      },
+      },  // #3
       sl_day: {
             type: Number,
             required: false
-      },
+      },  // #4
       el_day: {
             type: Number,
             required: false
@@ -131,6 +134,14 @@ const dtrSchema = new Schema({
             type: String,
             required: false
       },
+      restday_counter: {
+            type: Number,
+            required: false
+      },
+      working_day_counter: {
+            type: Number,
+            required: false
+      }
 
 },
 
