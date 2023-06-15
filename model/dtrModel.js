@@ -85,16 +85,16 @@ const dtrSchema = new Schema({
       absent_day: {
             type: Number,
             required: false
-      },  // #2
-      vl_day: {
+      }, 
+      vl_day: {  //earnings #3
             type: Number,
             required: false
-      },  // #3
-      sl_day: {
+      },  
+      sl_day: {  //earnings #4
             type: Number,
             required: false
-      },  // #4
-      el_day: {
+      },
+      el_day: {  //earnings #5
             type: Number,
             required: false
       },
@@ -134,11 +134,15 @@ const dtrSchema = new Schema({
             type: String,
             required: false
       },
-      restday_counter: {
+      restday_counter: {  //earnings #1
             type: Number,
             required: false
       },
-      working_day_counter: {
+      working_day_counter: {  //earnings #2
+            type: Number,
+            required: false
+      },
+      restday_overtime_counter: {  //earnings #2
             type: Number,
             required: false
       }
