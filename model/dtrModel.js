@@ -65,11 +65,6 @@ const dtrSchema = new Schema({
       },
 
 
-
-      is_restday: {   // #1
-            type: String,
-            required: false
-      },
       total_tardiness_min: {
             type: Number,
             required: false
