@@ -35,13 +35,18 @@ const createEmployee = async (req, res) => {
           sick_leave,
           vacation_leave,
           emergency_leave,
-         
+
           username,
           password,
           regular_ot,
           restday_ot,
           special_ot,
-          legal_ot
+          legal_ot,
+
+          restday_first_eight_ot,
+          special_first_eight_ot,
+          legal_first_eight_ot
+
      } = req.body
 
      try {
@@ -81,7 +86,11 @@ const createEmployee = async (req, res) => {
                regular_ot,
                restday_ot,
                special_ot,
-               legal_ot
+               legal_ot,
+
+               restday_first_eight_ot,
+               special_first_eight_ot,
+               legal_first_eight_ot
 
           })
           res.status(200).json(employee)

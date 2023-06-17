@@ -149,6 +149,18 @@ const employeeSchema = new Schema({
             type: Number,
             required: false
       },
+      restday_first_eight_ot: {
+            type: Number,
+            required: false
+      },
+      special_first_eight_ot: {
+            type: Number,
+            required: false
+      },
+      legal_first_eight_ot: {
+            type: Number,
+            required: false
+      },
 },
 
       {
