@@ -38,6 +38,7 @@ const createDtr = async (req, res) => {
           vl_nopay_day,
           sl_nopay_day,
           el_nopay_day,
+          restday_nopay_day,
 
 
           regular_ot_hours,
@@ -84,6 +85,7 @@ const createDtr = async (req, res) => {
                vl_nopay_day,
                sl_nopay_day,
                el_nopay_day,
+               restday_nopay_day,
 
 
                regular_ot_hours,
@@ -96,6 +98,7 @@ const createDtr = async (req, res) => {
                restday_counter,
                working_day_counter,
                restday_overtime_counter
+               
 
           })
           res.status(200).json(dtr)

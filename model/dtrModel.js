@@ -140,6 +140,10 @@ const dtrSchema = new Schema({
       restday_overtime_counter: {  //earnings #2
             type: Number,
             required: false
+      },
+      restday_nopay_day: {
+            type: Number,
+            required: false
       }
 
 },
