@@ -122,6 +122,20 @@ const getSinglePayslip = async (req, res) => {
      }
 }
 
+const getAllPayslip = async (req, res) => {
+     try {
+          /**Workout.find - finding al entries from DB
+           * await Workout.find() will run immediately even
+           * if the "workout" variable is not called yet
+           */
+          const allPayslip = await Payslip.find({}).sort({ createdAt: -1 })
+          //displaying response to user: all workouts from DB
+          res.status(200).json(allPayslip)
+     } catch (error) {
+          res.status(400).json({ error: error.message })
+     }
+}
+
 const deleteSinglePayslip = async (req, res) => {
      //id of the request parameter. Ex: xxx/delete/12e3289je3o2jtu2
      const { id } = req.params;
@@ -148,4 +162,5 @@ module.exports = {
      createPayslip,
      getSinglePayslip,
      deleteSinglePayslip,
+     getAllPayslip
 }
