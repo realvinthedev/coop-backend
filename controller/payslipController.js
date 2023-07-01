@@ -52,6 +52,9 @@ const createPayslip = async (req, res) => {
           sl_nopay_amount,
           el_nopay_days,
           el_nopay_amount,
+          earning_deduction_total,
+
+
           sss,
           philhealth,
           hdmf,
@@ -63,6 +66,7 @@ const createPayslip = async (req, res) => {
           lodging,
           utilities,
           deduction_total,
+          gross_pay,
           net_pay,
 
 
@@ -74,13 +78,13 @@ const createPayslip = async (req, res) => {
                period,
                name,
                employee_id,
-
+     
                base_salary,
                bi_monthly,
                daily,
                hourly,
                minute,
-
+     
                basic_pay,
                allowance,
                ot_regular_hours,
@@ -101,8 +105,8 @@ const createPayslip = async (req, res) => {
                night_diff_amount,
                prior_period_adj_earnings,
                earnings_total,
-
-
+     
+     
                tardiness_mins,
                tardiness_amount,
                undertime_mins,
@@ -117,6 +121,9 @@ const createPayslip = async (req, res) => {
                sl_nopay_amount,
                el_nopay_days,
                el_nopay_amount,
+               earning_deduction_total,
+     
+     
                sss,
                philhealth,
                hdmf,
@@ -128,8 +135,9 @@ const createPayslip = async (req, res) => {
                lodging,
                utilities,
                deduction_total,
+               gross_pay,
                net_pay,
-
+     
           })
           res.status(200).json(payslip)
      } catch (error) {

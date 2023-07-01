@@ -140,6 +140,14 @@ const payslipSchema = new Schema({
       el_nopay_amount: {
             type: Number
       },
+
+      earning_deduction_total: {
+            type: Number
+      },
+      
+
+
+
       sss: {
             type: Number
       },
@@ -171,6 +179,9 @@ const payslipSchema = new Schema({
             type: Number
       },
       deduction_total: {
+            type: Number
+      },
+      gross_pay: {
             type: Number
       },
       net_pay: {
