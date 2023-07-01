@@ -95,9 +95,14 @@ const payslipSchema = new Schema({
       prior_period_adj_earnings: {
             type: Number
       },
+
+      
       earnings_total: {
             type: Number
       },
+
+
+
       tardiness_mins: {
             type: Number
       },
