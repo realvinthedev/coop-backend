@@ -14,6 +14,7 @@ const productRoutes = require('./routes/product')
 const posRoutes = require('./routes/pos')
 const memberRoutes = require('./routes/member')
 const savingsRoutes = require('./routes/savings')
+const payslipRoutes = require('./routes/payslip')
 
 
 
@@ -60,7 +61,7 @@ app.use('/api/product', productRoutes)
 app.use('/api/pos', posRoutes)
 app.use('/api/member', memberRoutes)
 app.use('/api/savings', savingsRoutes)
-
+app.use('/api/payslip', payslipRoutes)
 /**CONNECT TO DB */
 mongoose.connect(process.env.MONGO_URI)
         .then(() => {
