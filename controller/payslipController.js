@@ -9,52 +9,31 @@ const createPayslip = async (req, res) => {
           period,
           name,
           employee_id,
-
           base_salary,
           bi_monthly,
           daily,
           hourly,
           minute,
-
           basic_pay,
           allowance,
-          ot_regular_hours,
           ot_regular_amount,
-          ot_restday_hours,
           ot_restday_amount,
-          ot_special_hours,
           ot_special_amount,
-          ot_legal_hours,
           ot_legal_amount,
-          add_ot_restday_hours,
           add_ot_restday_amount,
-          add_ot_special_hours,
           add_ot_special_amount,
-          add_ot_legal_hours,
           add_ot_legal_amount,
-          night_diff_hours,
           night_diff_amount,
           prior_period_adj_earnings,
           earnings_total,
-
-
-          tardiness_mins,
           tardiness_amount,
-          undertime_mins,
           undertime_amount,
-          restday_nopay_days,
           restday_nopay_amount,
-          absence_days,
           absence_amount,
-          vl_nopay_days,
           vl_nopay_amount,
-          sl_nopay_days,
           sl_nopay_amount,
-          el_nopay_days,
           el_nopay_amount,
           earning_deduction_total,
-
-
           sss,
           philhealth,
           hdmf,
@@ -68,8 +47,10 @@ const createPayslip = async (req, res) => {
           deduction_total,
           gross_pay,
           net_pay,
-
-
+          share_capital,
+          other_deduction,
+          other_earnings,
+          pay_adjustment_deduction
      } = req.body
 
      try {
@@ -78,52 +59,31 @@ const createPayslip = async (req, res) => {
                period,
                name,
                employee_id,
-     
                base_salary,
                bi_monthly,
                daily,
                hourly,
                minute,
-     
                basic_pay,
                allowance,
-               ot_regular_hours,
                ot_regular_amount,
-               ot_restday_hours,
                ot_restday_amount,
-               ot_special_hours,
                ot_special_amount,
-               ot_legal_hours,
                ot_legal_amount,
-               add_ot_restday_hours,
                add_ot_restday_amount,
-               add_ot_special_hours,
                add_ot_special_amount,
-               add_ot_legal_hours,
                add_ot_legal_amount,
-               night_diff_hours,
                night_diff_amount,
                prior_period_adj_earnings,
                earnings_total,
-     
-     
-               tardiness_mins,
                tardiness_amount,
-               undertime_mins,
                undertime_amount,
-               restday_nopay_days,
                restday_nopay_amount,
-               absence_days,
                absence_amount,
-               vl_nopay_days,
                vl_nopay_amount,
-               sl_nopay_days,
                sl_nopay_amount,
-               el_nopay_days,
                el_nopay_amount,
                earning_deduction_total,
-     
-     
                sss,
                philhealth,
                hdmf,
@@ -137,7 +97,11 @@ const createPayslip = async (req, res) => {
                deduction_total,
                gross_pay,
                net_pay,
-     
+               share_capital,
+               other_deduction,
+               other_earnings,
+               pay_adjustment_deduction
+
           })
           res.status(200).json(payslip)
      } catch (error) {

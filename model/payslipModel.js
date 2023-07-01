@@ -18,10 +18,6 @@ const payslipSchema = new Schema({
       name: {
             type: String
       },
-      employee_id: {
-            type: String
-      },
-
       base_salary: {
             type: Number
       },
@@ -44,51 +40,35 @@ const payslipSchema = new Schema({
       allowance: {
             type: Number
       },
-      ot_regular_hours: {
-            type: Number
-      },
+    
       ot_regular_amount: {
             type: Number
       },
-      ot_restday_hours: {
-            type: Number
-      },
+     
       ot_restday_amount: {
             type: Number
       },
-      ot_special_hours: {
-            type: Number
-      },
+    
       ot_special_amount: {
             type: Number
       },
-      ot_legal_hours: {
-            type: Number
-      },
+    
       ot_legal_amount: {
             type: Number
       },
-      add_ot_restday_hours: {
-            type: Number
-      },
+    
       add_ot_restday_amount: {
             type: Number
       },
-      add_ot_special_hours: {
-            type: Number
-      },
+      
       add_ot_special_amount: {
             type: Number
       },
-      add_ot_legal_hours: {
-            type: Number
-      },
+     
       add_ot_legal_amount: {
             type: Number
       },
-      night_diff_hours: {
-            type: Number
-      },
+     
       night_diff_amount: {
             type: Number
       },
@@ -103,45 +83,31 @@ const payslipSchema = new Schema({
 
 
 
-      tardiness_mins: {
-            type: Number
-      },
+      
       tardiness_amount: {
             type: Number
       },
-      undertime_mins: {
-            type: Number
-      },
+     
       undertime_amount: {
             type: Number
       },
-      restday_nopay_days: {
-            type: Number
-      },
+      
       restday_nopay_amount: {
             type: Number
       },
-      absence_days: {
-            type: Number
-      },
+      
       absence_amount: {
             type: Number
       },
-      vl_nopay_days: {
-            type: Number
-      },
+      
       vl_nopay_amount: {
             type: Number
       },
-      sl_nopay_days: {
-            type: Number
-      },
+      
       sl_nopay_amount: {
             type: Number
       },
-      el_nopay_days: {
-            type: Number
-      },
+    
       el_nopay_amount: {
             type: Number
       },
@@ -190,6 +156,20 @@ const payslipSchema = new Schema({
             type: Number
       },
       net_pay: {
+            type: Number
+      },
+
+      pay_adjustment_deduction: {
+            type: Number
+      },
+      other_deduction: {
+            type: Number
+      },
+      other_earnings: {
+            type: Number
+      },
+
+      share_capital: {
             type: Number
       },
 
