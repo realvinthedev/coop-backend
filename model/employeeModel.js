@@ -161,6 +161,10 @@ const employeeSchema = new Schema({
             type: Number,
             required: false
       },
+      employment_status: {
+            type: String,
+            required: false
+      },
 },
 
       {

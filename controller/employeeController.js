@@ -45,7 +45,10 @@ const createEmployee = async (req, res) => {
 
           restday_first_eight_ot,
           special_first_eight_ot,
-          legal_first_eight_ot
+          legal_first_eight_ot,
+
+          employement_status
+          
 
      } = req.body
 
@@ -90,7 +93,9 @@ const createEmployee = async (req, res) => {
 
                restday_first_eight_ot,
                special_first_eight_ot,
-               legal_first_eight_ot
+               legal_first_eight_ot,
+
+               employement_status
 
           })
           res.status(200).json(employee)
