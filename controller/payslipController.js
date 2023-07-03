@@ -78,7 +78,7 @@ const updateSinglePayslip = async (req, res) => {
            return res.status(404).json({ error: 'No Payslip found' })
      }
      try {
-           const payslip = await Payslip.findOneAndUpdate({ _id: id }, {
+           const payslip = await Payslip.findOneAndUpdate({ employee_id:  `${id}` }, {
                  ...req.body
            })
 
