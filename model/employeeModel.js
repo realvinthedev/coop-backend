@@ -23,15 +23,12 @@ const employeeSchema = new Schema({
       },
       age: {
             type: String,
-            required: true
       },
       birthday: {
             type: String,
-            required: true
       },
       address: {
             type: String,
-            required: true
       },
       email: {
             type: String,
@@ -47,7 +44,6 @@ const employeeSchema = new Schema({
       },
       job_title: {
             type: String,
-            required: true
       },
       base_salary: {
             type: Number,
@@ -55,23 +51,18 @@ const employeeSchema = new Schema({
       },
       bimonthly_salary: {
             type: Number,
-            required: true
       },
       daily_salary: {
             type: Number,
-            required: true
       },
       hourly_salary: {
             type: Number,
-            required: true
       },
       minute_salary: {
             type: Number,
-            required: true
       },
       start_date: {
             type: String,
-            required: true
       },
       end_date: {
             type: String,
@@ -79,11 +70,9 @@ const employeeSchema = new Schema({
       },
       contract: {
             type: String,
-            required: true
       },
       department: {
             type: String,
-            required: true
       },
       is_active: {
             type: Boolean,
@@ -115,15 +104,12 @@ const employeeSchema = new Schema({
       },
       sick_leave: {
             type: Number,
-            required: true
       },
       vacation_leave: {
             type: Number,
-            required: true
       },
       emergency_leave: {
             type: Number,
-            required: true
       },
       username: {
             type: String,
