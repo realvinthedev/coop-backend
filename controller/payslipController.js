@@ -74,9 +74,6 @@ const deleteSinglePayslip = async (req, res) => {
 const updateSinglePayslip = async (req, res) => {
      const { id } = req.params
 
-     if (!mongoose.Types.ObjectId.isValid(id)) {
-           return res.status(404).json({ error: 'No Payslip found' })
-     }
      try {
            const payslip = await Payslip.findOneAndUpdate({ employee_id:  `${id}` }, {
                  ...req.body
