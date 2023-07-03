@@ -6,7 +6,8 @@ const {
      createPayslip,
      getSinglePayslip,
      deleteSinglePayslip,
-     getAllPayslip
+     getAllPayslip,
+     updateSinglePayslip
 } = require('../controller/payslipController')
 router.use(requireAuth)
 
@@ -18,12 +19,13 @@ router.post('/', createPayslip)
 router.get('/:id', getSinglePayslip)
 
 /**GET all Payslip */
-router.get('/:id', getAllPayslip)
+router.get('/', getAllPayslip)
 
 /**DELETE SINGLE Payslip */
 router.delete('/:id', deleteSinglePayslip)
 
 
-
+/**EDIT SINGLE Payslip */
+router.patch('/:id', updateSinglePayslip)
 
 module.exports = router
