@@ -16,7 +16,7 @@ const payslipSchema = new Schema({
             type: String
       },
       net: {
-            type: String
+            type: Number
       },
 
 },
