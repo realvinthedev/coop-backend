@@ -61,10 +61,6 @@ const memberSchema = new Schema({
             type: String,
             required: false
       },
-      housing_equity: {
-            type: String,
-            required: false
-      },
       atm_passbook_fee: {
             type: String,
             required: false
