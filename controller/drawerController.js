@@ -44,18 +44,27 @@ const getAllDrawer = async (req, res) => {
       }
 }
 
-const getSingleDrawer = async (req, res) => {
-      const { drawer_id } = req.params;
+const getCurrentDrawer = async (req, res) => {
       try {
-           const drawer = await Drawer.find({ drawer_id })
-          
-           //displaying response to user: single workout by ID from DB
-           res.status(200).json(drawer)
+            const allDrawer = await Drawer.findOne().sort({ createdAt: -1 })
+            //displaying response to user: all workouts from DB
+            res.status(200).json(allDrawer)
       } catch (error) {
-           res.status(400).json({ error: 'No drawer found' })
+            res.status(400).json({ error: error.message })
       }
  }
 
+ const getSingleDrawer = async (req, res) => {
+      const { drawer_id } = req.params;
+      try {
+           const drawer = await Drawer.find({ drawer_id })
+           console.log(drawer)
+           //displaying response to user: single workout by ID from DB
+           res.status(200).json(drawer)
+      } catch (error) {
+           res.status(400).json({ error: 'No product found' })
+      }
+ }
 
 const updateDrawer = async (req, res) => {
       const { id } = req.params
@@ -81,4 +90,5 @@ module.exports = {
       getAllDrawer,
       updateDrawer,
       getSingleDrawer,
+      getCurrentDrawer
 }

@@ -7,6 +7,7 @@ const {
      getAllDrawer,
      updateDrawer,
      getSingleDrawer,
+     getCurrentDrawer
 } = require('../controller/drawerController')
 router.use(requireAuth)
 
@@ -16,6 +17,9 @@ router.post('/', createDrawer)
 
 /**GET ALL Product */
 router.get('/', getAllDrawer)
+
+/**GET current Product */
+router.get('/current/', getCurrentDrawer)
 
 /**GET SINGLE EMPLOYEE */
 router.get('/:id', getSingleDrawer)
