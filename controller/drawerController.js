@@ -10,6 +10,7 @@ const createDrawer = async (req, res) => {
             drawer_enddatetime,
             drawer_starting_cash,
             drawer_sales,
+            drawer_expected_cash,
             drawer_actual_cash,
             drawer_status
       } = req.body
@@ -21,6 +22,7 @@ const createDrawer = async (req, res) => {
                   drawer_enddatetime,
                   drawer_starting_cash,
                   drawer_sales,
+                  drawer_expected_cash,
                   drawer_actual_cash,
                   drawer_status
             })

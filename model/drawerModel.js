@@ -20,6 +20,9 @@ const drawerSchema = new Schema({
       drawer_sales: {
             type: Number,
       },
+      drawer_expected_cash: {
+            type: Number,
+      },
       drawer_actual_cash: {
             type: Number,
       },
