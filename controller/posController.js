@@ -11,6 +11,7 @@ const createPos = async (req, res) => {
           pos_cost_total,
           pos_total,
           pos_drawer_id,
+          pos_user
      } = req.body
 
      try {
@@ -21,6 +22,7 @@ const createPos = async (req, res) => {
                pos_cost_total,
                pos_total,
                pos_drawer_id,
+               pos_user
           })
           res.status(200).json(pos)
      } catch (error) {

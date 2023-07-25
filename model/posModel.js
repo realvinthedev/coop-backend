@@ -36,6 +36,9 @@ const posSchema = new Schema({
       pos_drawer_id: {
             type: String,
       },
+      pos_user: {
+            type: String,
+      },
 },
       {
             timestamps: true
