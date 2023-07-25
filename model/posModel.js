@@ -32,7 +32,10 @@ const posSchema = new Schema({
       pos_total: {
             type: Number,
             required: true
-      }
+      },
+      pos_drawer_id: {
+            type: String,
+      },
 },
       {
             timestamps: true
