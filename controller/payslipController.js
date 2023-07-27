@@ -8,7 +8,9 @@ const createPayslip = async (req, res) => {
           month,
           period,
           employee_id,
-          net
+          net,
+          department,
+          name
      } = req.body
 
      try {
@@ -16,7 +18,9 @@ const createPayslip = async (req, res) => {
                month,
                period,
                employee_id,
-               net
+               net,
+               department,
+               name
 
           })
           res.status(200).json(payslip)

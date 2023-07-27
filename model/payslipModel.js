@@ -18,6 +18,12 @@ const payslipSchema = new Schema({
       net: {
             type: Number
       },
+      department: {
+            type: String
+      },
+      name: {
+            type: String
+      },
 
 },
 
