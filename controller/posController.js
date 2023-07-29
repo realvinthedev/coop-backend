@@ -13,7 +13,9 @@ const createPos = async (req, res) => {
           pos_drawer_id,
           pos_user,
           pos_customer_id,
-          pos_customer_name
+          pos_customer_name,
+          pos_cash,
+          pos_change
      } = req.body
 
      try {
@@ -26,7 +28,9 @@ const createPos = async (req, res) => {
                pos_drawer_id,
                pos_user,
                pos_customer_id,
-               pos_customer_name
+               pos_customer_name,
+               pos_cash,
+               pos_change
           })
           res.status(200).json(pos)
      } catch (error) {

@@ -45,6 +45,12 @@ const posSchema = new Schema({
       pos_customer_name: {
             type: String,
       },
+      pos_cash: {
+            type: Number,
+      },
+      pos_change: {
+            type: Number,
+      },
 },
       {
             timestamps: true
