@@ -39,6 +39,12 @@ const posSchema = new Schema({
       pos_user: {
             type: String,
       },
+      pos_customer_id: {
+            type: String,
+      },
+      pos_customer_name: {
+            type: String,
+      },
 },
       {
             timestamps: true
