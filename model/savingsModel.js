@@ -17,13 +17,78 @@ const savingsSchema = new Schema({
             type: String,
             required: false
       },
-      type: {
-            type: String,
-            required: false
-      },
-      amount: {
+
+
+
+      //membership
+      membership_fee: {
             type: Number,
-            required: false
+      },
+
+      //share_capital
+      share_capital_debit: {
+            type: Number,
+      },
+      share_capital_credit: {
+            type: Number,
+      },
+      share_capital_balance: {
+            type: Number,
+      },
+
+      //coop_savings
+      coop_savings_debit: {
+            type: Number,
+      },
+      coop_savings_credit: {
+            type: Number,
+      },
+      coop_savings_balance: {
+            type: Number,
+      },
+
+      //special
+      special_savings_debit: {
+            type: Number,
+      },
+      special_savings_credit: {
+            type: Number,
+      },
+      special_savings_balance: {
+            type: Number,
+      },
+
+      //Kaya Savings
+      kaya_savings_debit: {
+            type: Number,
+      },
+      kaya_savings_credit: {
+            type: Number,
+      },
+      kaya_savings_balance: {
+            type: Number,
+      },
+
+      //karamay fund
+      karamay_savings_debit: {
+            type: Number,
+      },
+      karamay_savings_credit: {
+            type: Number,
+      },
+      karamay_savings_balance: {
+            type: Number,
+      },
+
+      //others fund
+      others_debit: {
+            type: Number,
+      },
+      others_credit: {
+            type: Number,
+      },
+      others_balance: {
+            type: Number,
       },
       reference_document: {
             type: String,
@@ -33,11 +98,11 @@ const savingsSchema = new Schema({
             type: String,
             required: false
       },
-      
-     
-   
-     
-      
+
+
+
+
+
 },
       {
             timestamps: true
