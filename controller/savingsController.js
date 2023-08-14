@@ -8,8 +8,31 @@ const createSavings = async (req, res) => {
             member_id,
             date,
             particulars,
-            type,
-            amount,
+            share_capital_debit,
+            membership_fee,
+            share_capital_credit,
+            share_capital_balance,
+
+            coop_savings_debit,
+            coop_savings_credit,
+            coop_savings_balance,
+
+            special_savings_debit,
+            special_savings_credit,
+            special_savings_balance,
+
+            kaya_savings_debit,
+            kaya_savings_credit,
+            kaya_savings_balance,
+
+
+            karamay_savings_debit,
+            karamay_savings_credit,
+            karamay_savings_balance,
+
+            others_debit,
+            others_credit,
+            others_balance,
             reference_document,
             remarks
 
@@ -20,8 +43,31 @@ const createSavings = async (req, res) => {
                   member_id,
                   date,
                   particulars,
-                  type,
-                  amount,
+                  share_capital_debit,
+                  membership_fee,
+                  share_capital_credit,
+                  share_capital_balance,
+
+                  coop_savings_debit,
+                  coop_savings_credit,
+                  coop_savings_balance,
+
+                  special_savings_debit,
+                  special_savings_credit,
+                  special_savings_balance,
+
+                  kaya_savings_debit,
+                  kaya_savings_credit,
+                  kaya_savings_balance,
+
+
+                  karamay_savings_debit,
+                  karamay_savings_credit,
+                  karamay_savings_balance,
+
+                  others_debit,
+                  others_credit,
+                  others_balance,
                   reference_document,
                   remarks
             })
@@ -48,7 +94,7 @@ const getAllSavings = async (req, res) => {
 const getSingleSavings = async (req, res) => {
       const { member_id } = req.params;
       try {
-            const savings = await Savings.find({ member_id : member_id })
+            const savings = await Savings.find({ member_id: member_id })
             console.log(savings)
             //displaying response to user: single workout by ID from DB
             res.status(200).json(savings)
