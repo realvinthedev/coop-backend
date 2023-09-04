@@ -24,6 +24,9 @@ const payslipSchema = new Schema({
       name: {
             type: String
       },
+      approval_status: {
+            type: String
+      }
 
 },
 

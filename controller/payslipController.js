@@ -5,24 +5,26 @@ const Payslip = require('../model/payslipModel')
 /**CREATE NEW EMPLOYEE */
 const createPayslip = async (req, res) => {
      const {
+          approval_status,
           month,
           period,
           employee_id,
           net,
           department,
           name,
-          status
+          
      } = req.body
 
      try {
           const payslip = await Payslip.create({
+               approval_status,
                month,
                period,
                employee_id,
                net,
                department,
                name,
-               status
+               
           })
           res.status(200).json(payslip)
      } catch (error) {
