@@ -23,7 +23,6 @@ const createPayslip = async (req, res) => {
                department,
                name,
                status
-
           })
           res.status(200).json(payslip)
      } catch (error) {
