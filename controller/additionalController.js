@@ -57,6 +57,23 @@ const createAdditional = async (req, res) => {
           res.status(400).json({ error: error.message })
      }
 }
+const updateSingleAdditional = async (req, res) => {
+     const { id } = req.params
+
+     if (!mongoose.Types.ObjectId.isValid(id)) {
+           return res.status(404).json({ error: 'No Additional found' })
+     }
+     try {
+           const singleAdditional = await Additional.findOneAndUpdate({ _id: id }, {
+                 ...req.body
+           })
+
+           //displaying response to user: deleted workout by ID from DB
+           res.status(200).json(singleAdditional)
+     } catch (error) {
+           res.status(400).json({ error: 'No Additional found' })
+     }
+}
 
 const getAllAdditionalByDate = async (req, res) => {
      const { id } = req.params;
@@ -112,5 +129,6 @@ module.exports = {
      getAdditionalById,
      getAllAdditionalByDate,
      getAllAdditional,
-     deleteSingleAdditional
+     deleteSingleAdditional,
+     updateSingleAdditional
 }

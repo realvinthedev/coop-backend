@@ -7,7 +7,8 @@ const {
      getAdditionalById,
      getAllAdditionalByDate,
      getAllAdditional,
-     deleteSingleAdditional
+     deleteSingleAdditional,
+     updateSingleAdditional
 } = require('../controller/additionalController')
 router.use(requireAuth)
 
@@ -17,6 +18,7 @@ router.post('/', createAdditional)
 
 router.get('/', getAllAdditional)
 
+router.patch('/:id', updateSingleAdditional)
 
 router.get('/:employee_id', getAdditionalById)
 
