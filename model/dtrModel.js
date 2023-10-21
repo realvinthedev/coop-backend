@@ -129,6 +129,14 @@ const dtrSchema = new Schema({
             type: String,
             required: false
       },
+      approve_undertime: {
+            type: String,
+            required: false
+      },
+      approve_tardiness: {
+            type: String,
+            required: false
+      },
       restday_counter: {  //earnings #1
             type: Number,
             required: false

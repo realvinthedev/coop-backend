@@ -47,6 +47,8 @@ const createDtr = async (req, res) => {
           legal_ot_hours,
           day_type,
           approve_ot,
+          approve_tardiness,
+          approve_undertime,
 
           restday_counter,
           working_day_counter,
@@ -94,7 +96,9 @@ const createDtr = async (req, res) => {
                legal_ot_hours,
                day_type,
                approve_ot,
-
+               approve_tardiness,
+               approve_undertime,
+               
                restday_counter,
                working_day_counter,
                restday_overtime_counter
