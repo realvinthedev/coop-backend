@@ -97,6 +97,60 @@ const memberSchema = new Schema({
             type: String,
             required: false
       },
+
+
+
+
+
+      tin: {
+            type: String,
+            required: false
+      },
+      coop_savings_passbook_number: {
+            type: String,
+            required: false
+      },
+      address: {
+            type: String,
+            required: false
+      },
+      dob: {
+            type: String,
+            required: false
+      },
+      age: {
+            type: Number,
+            required: false
+      },
+      gender: {
+            type: String,
+            required: false
+      },
+      civil_status: {
+            type: String,
+            required: false
+      },
+      highest_educational_attainment: {
+            type: String,
+            required: false
+      },
+      occupation: {
+            type: String,
+            required: false
+      },
+      number_of_dependents: {
+            type: String,
+            required: false
+      },
+      religion: {
+            type: String,
+            required: false
+      },
+      annual_income: {
+            type: String,
+            required: false
+      },
+      
       
 },
       {

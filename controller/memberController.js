@@ -28,7 +28,19 @@ const createMember = async (req, res) => {
             affiliation_org,
             passbook_printed,
             remarks,
-            notes
+            notes,
+            tin,
+            coop_savings_passbook_number,
+            address,
+            dob,
+            age,
+            gender,
+            civil_status,
+            highest_educational_attainment,
+            occupation,
+            religion,
+            annual_income,
+
       } = req.body
 
       try {
@@ -56,7 +68,19 @@ const createMember = async (req, res) => {
                   affiliation_org,
                   passbook_printed,
                   remarks,
-                  notes
+                  notes,
+                  tin,
+                  coop_savings_passbook_number,
+                  address,
+                  dob,
+                  age,
+                  gender,
+                  civil_status,
+                  highest_educational_attainment,
+                  occupation,
+                  religion,
+                  annual_income,
+
             })
             res.status(200).json(member)
       } catch (error) {
