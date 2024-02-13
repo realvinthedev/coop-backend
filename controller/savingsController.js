@@ -25,6 +25,10 @@ const createSavings = async (req, res) => {
             kaya_savings_credit,
             kaya_savings_balance,
 
+            housing_savings_debit,
+            housing_savings_credit,
+            housing_savings_balance,
+
 
             karamay_savings_debit,
             karamay_savings_credit,
@@ -59,6 +63,10 @@ const createSavings = async (req, res) => {
                   kaya_savings_debit,
                   kaya_savings_credit,
                   kaya_savings_balance,
+
+                  housing_savings_debit,
+                  housing_savings_credit,
+                  housing_savings_balance,
 
 
                   karamay_savings_debit,

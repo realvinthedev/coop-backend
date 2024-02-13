@@ -69,6 +69,16 @@ const savingsSchema = new Schema({
             type: Number,
       },
 
+      housing_savings_debit: {
+            type: Number,
+      },
+      housing_savings_credit: {
+            type: Number,
+      },
+      housing_savings_balance: {
+            type: Number,
+      },
+
       //karamay fund
       karamay_savings_debit: {
             type: Number,
