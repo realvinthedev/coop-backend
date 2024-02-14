@@ -150,6 +150,42 @@ const memberSchema = new Schema({
             type: String,
             required: false
       },
+      membership_type: {
+            type: String,
+            required: false
+      },
+      initial_share_capital: {
+            type: String,
+            required: false
+      },
+      initial_no_share: {
+            type: String,
+            required: false
+      },
+      special_savings_account: {
+            type: String,
+            required: false
+      },
+      impukan_certificate_account: {
+            type: String,
+            required: false
+      },
+      number_of_dependent: {
+            type: String,
+            required: false
+      },
+      pwd_type: {
+            type: String,
+            required: false
+      },
+      termination_date: {
+            type: String,
+            required: false
+      },
+      termination_bod: {
+            type: String,
+            required: false
+      },
       
       
 },
