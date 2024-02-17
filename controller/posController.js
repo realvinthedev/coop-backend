@@ -9,7 +9,7 @@ const createPos = async (req, res) => {
           pos_transaction_id,
           pos_items,
           pos_cost_total,
-          pos_total,
+          //pos_total,
           pos_drawer_id,
           pos_user,
           pos_customer_id,
@@ -28,7 +28,7 @@ const createPos = async (req, res) => {
                pos_transaction_id,
                pos_items,
                pos_cost_total,
-               pos_total,
+              // pos_total,
                pos_drawer_id,
                pos_user,
                pos_customer_id,
@@ -38,7 +38,7 @@ const createPos = async (req, res) => {
                pos_discount,
                pos_credit_sales,
                pos_cash_sales
-               
+
           })
           res.status(200).json(pos)
      } catch (error) {
