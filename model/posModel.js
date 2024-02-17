@@ -51,6 +51,15 @@ const posSchema = new Schema({
       pos_change: {
             type: Number,
       },
+      discount: {
+            type: Number,
+      },
+      credit_sales: {
+            type: Number,
+      },
+      cash_sales: {
+            type: Number,
+      },
 },
       {
             timestamps: true

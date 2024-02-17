@@ -15,7 +15,10 @@ const createPos = async (req, res) => {
           pos_customer_id,
           pos_customer_name,
           pos_cash,
-          pos_change
+          pos_change,
+          pos_discount,
+          pos_credit_sales,
+          pos_cash_sales
      } = req.body
 
      try {
@@ -30,7 +33,10 @@ const createPos = async (req, res) => {
                pos_customer_id,
                pos_customer_name,
                pos_cash,
-               pos_change
+               pos_change,
+               pos_discount,
+               pos_credit_sales,
+               pos_cash_sales
           })
           res.status(200).json(pos)
      } catch (error) {
