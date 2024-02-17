@@ -18,7 +18,8 @@ const createPos = async (req, res) => {
           pos_change,
           pos_discount,
           pos_credit_sales,
-          pos_cash_sales
+          pos_cash_sales,
+          pos_discounted_amount
 
      } = req.body
 
@@ -37,7 +38,8 @@ const createPos = async (req, res) => {
                pos_change,
                pos_discount,
                pos_credit_sales,
-               pos_cash_sales
+               pos_cash_sales,
+               pos_discounted_amount
 
           })
           res.status(200).json(pos)
