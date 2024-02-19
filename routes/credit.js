@@ -6,7 +6,8 @@ const {
      createCredit,
      getAllCredit,
      getSingleCredit,
-     deleteSingleCredit
+     deleteSingleCredit,
+     getSingleCustomer
 } = require('../controller/creditController')
 router.use(requireAuth)
 
@@ -16,6 +17,8 @@ router.post('/', createCredit)
 
 /**GET ALL Product */
 router.get('/', getAllCredit)
+
+router.get('/customer_id', getSingleCustomer)
 
 /**GET SINGLE EMPLOYEE */
 router.get('/transaction/:transaction_id', getSingleCredit)

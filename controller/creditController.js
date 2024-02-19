@@ -39,6 +39,19 @@ const getAllCredit = async (req, res) => {
      }
 }
 
+
+const getSingleCustomer = async (req, res) => {
+     const { customer_id } = req.params;
+     try {
+          const credit = await Credit.find({ customer_id })
+          //displaying response to user: single workout by ID from DB
+          res.status(200).json(credit)
+     } catch (error) {
+          res.status(400).json({ error: 'No credit found' })
+     }
+}
+
+
 const getSingleCredit = async (req, res) => {
      const { transaction_id } = req.params;
      try {
@@ -93,5 +106,6 @@ module.exports = {
      createCredit,
      getAllCredit,
      getSingleCredit,
-     deleteSingleCredit
+     deleteSingleCredit,
+     getSingleCustomer
 }
