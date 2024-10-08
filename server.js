@@ -18,6 +18,7 @@ const payslipRoutes = require('./routes/payslip')
 const drawerRoutes = require('./routes/drawer')
 const customerRoutes = require('./routes/customer')
 const creditRoutes = require('./routes/credit')
+const uploadRoutes = require('./routes/upload'); 
 
 
 const app = express()
@@ -67,6 +68,7 @@ app.use('/api/savings', savingsRoutes)
 app.use('/api/payslip', payslipRoutes)
 app.use('/api/drawer', drawerRoutes)
 app.use('/api/customer', customerRoutes)
+app.use('/api/upload', uploadRoutes); 
 app.use('/api/credit', creditRoutes)
 /**CONNECT TO DB */
 mongoose.connect(process.env.MONGO_URI)
